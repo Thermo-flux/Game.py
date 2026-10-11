@@ -1,4 +1,8 @@
 print ("Welcome to Type-Racer!")
 Name = input ("Please Enter Your Name And Press Enter:-")
 print(f"Hi {Name}!")
-Difficulty = input (f"please enter the difficulty {Name}")
+word_length = int(input("Please enter word length"))
+import string 
+import random
+letters = "".join (random.choices (string.ascii_letters, k=word_length )) 
+print (f"here you go!:- {letters}")
