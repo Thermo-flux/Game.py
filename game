@@ -4,5 +4,19 @@ print(f"Hi {Name}!")
 word_length = int(input("Please enter word length"))
 import string 
 import random
-letters = "".join (random.choices (string.ascii_letters, k=word_length )) 
-print (f"here you go!:- {letters}")
+import time  
+Word = "".join (random.choices (string.ascii_letters, k=word_length )) 
+print (f"here you go!:- {Word}") 
+input ("press enter when ready to type.")
+start_time = time.time()
+typed_word = input("GO!:-")
+end_time = time.time()
+total_time = end_time - start_time
+if typed_word == Word :
+    print ("PERFECT MATCH! Good Job!")
+    print (f"You Typed it in {total_time}seconds!")
+else :
+    print ("OOPS! Wrong Word Entered. Please Try Again!")
+
+
+
