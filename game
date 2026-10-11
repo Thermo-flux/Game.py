@@ -1,0 +1,4 @@
+print ("Welcome to Type-Racer!")
+Name = input ("Please Enter Your Name And Press Enter:-")
+print(f"Hi {Name}!")
+Difficulty = input (f"please enter the difficulty {Name}")
