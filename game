@@ -27,10 +27,24 @@ elif difficulty == 4 :
  word_length = 15
 else:
    print ("Please Retry and Enter a Valid Difficulty!")
+round_number = 1
 while True :
+    if round_number == 1:
+        print("\nGet ready!")
+        time.sleep(2)
+    else:
+        time.sleep (1.5)
+        print("\nReady for the next round?")
+        print("3...") 
+        time.sleep (1)
+        print ("2...") 
+        time.sleep (1)
+        print ("1..") 
+        time.sleep(1)
+
+    round_number += 1
     Word = "".join(random.choices(characters, k=word_length)) 
     print (f"here you go!:- {Word}")
-    input ("press enter when ready to type.")
     start_time = time.time()
     typed_word = input("GO!:-")
     end_time = time.time()
