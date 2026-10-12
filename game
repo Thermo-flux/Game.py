@@ -1,12 +1,34 @@
+import string
+import random
+import time
+import readchar
+from colorama import Fore, Style, init
+init ()
+# these are colours.
+green = Fore.GREEN
+red = Fore.RED
+grey = Fore.LIGHTBLACK_EX
+reset = Style.RESET_ALL
 print ("Welcome to Type-Racer!")
 Name = input ("Please Enter Your Name And Press Enter:-")
 print(f"Hi {Name}!")
-word_length = int(input("Please enter word length:-"))
-import string 
-import random
-import time  
+difficulty = int(input("Please select difficulty:\n1 for Easy\n2 for Medium\n3 for Hard\n4 for INSANE\nChoice: "))
+if difficulty == 1 :
+ characters = string.ascii_lowercase
+ word_length = 5
+elif difficulty == 2 :
+ characters = string.ascii_letters
+ word_length = 8
+elif difficulty == 3 :
+ characters = string.ascii_letters + string.digits
+ word_length = 10
+elif difficulty == 4 :
+ characters = string.ascii_letters + string.digits + string.punctuation
+ word_length = 15
+else:
+   print ("Please Retry and Enter a Valid Difficulty!")
 while True :
-    Word = "".join (random.choices (string.ascii_letters, k=word_length )) 
+    Word = "".join(random.choices(characters, k=word_length)) 
     print (f"here you go!:- {Word}")
     input ("press enter when ready to type.")
     start_time = time.time()
@@ -19,8 +41,14 @@ while True :
         print (f"You Typed it in {total_time:.2f} Seconds! with a speed of {WPM:.0f} WPM! ")
     else :
         user_answer = input ("OOPS! Wrong Word Entered! press y to Retry!")
-        if user_answer.lower () != "y" :
+        if user_answer.lower() != "y" :
+            print ("Thank You for Playing!")
             break
+
+       
+
+
+            
         
 
 
