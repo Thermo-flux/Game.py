@@ -1,0 +1,7 @@
+Hi There! You are probably wondering what this is, and why is it so small. No Worries! By the end of this small README you will know everything there is to know about this project.
+This is a Python Keyboard Game that runs in a CLI, it was Built in VS Code by me (Kernel, a Fellow Hack Clubber) 
+It's still under work and i plan to add a lot of features to it. for now, it has no GUI of any sort. its pure text and hence can deployed in a CLI.
+A Background Check:- Personally, ive never written a program in my life. this is my first ever program! thanks to this, i can now write some Python and I'm fairly happy! as said, a professional PRO-Grammer (Like the one sitting behind this screen) could probably code this thing in mere minutes, an AI could give a Better version in seconds. But.. IDC. it took me a lot of research and time to build this. but i think every second was well=spent. 
+I'm Planning to Implement MUCH MUCH more features VERY SOON. like adding clicking sound affects, scoreboards, levels, competitions and etc! But Ofc im limited by various factors like Skill, Time And Energy
+If you Wanna see how this progresses, then just hop on every day and check @ 6:20 IST or just drop a DM. I'm More than Willing to Share my Progress With you guys! 
+                                                                                                                                                              --Your Dear Kernel.
