@@ -47,24 +47,28 @@ while True :
     Word_Boilerplate = "".join ([f"{grey}{char}{reset}" for char in Word])
     print(f"\r Go!:- {Word_Boilerplate}", end="", flush=True)
     while len(typed_characters) < len(Word):
-     key = readchar.readkey()
-    if start_time == None :
-     start_time = time.time()
-     if key == readchar.key.BACKSPACE:
-        if len(typed_characters) > 0:
-         typed_characters.pop()
-     elif key.isprintable() and len(key) == 1 :
-        typed_characters.append(key)
-     Display = []
-     for position_number, character in enumerate (Word):
-        if position_number < len(typed_characters):
-         if typed_characters[position_number] == character:
-           Display.append(f"{green}{character}{reset}")
-         else :
-           Display.append(f"{red}{typed_characters[position_number]}{reset}")
-        else : 
-         Display.append(f"{grey}{character}{reset}")
-    print("\r GO!:-" + "".join(Display), end="", flush=True )
+        key = readchar.readkey()
+
+        if start_time is None:
+            start_time = time.time()
+
+        if key == readchar.key.BACKSPACE:
+            if len(typed_characters) > 0:
+                typed_characters.pop()
+        elif key.isprintable() and len(key) == 1:
+            typed_characters.append(key)
+
+        Display = []
+        for position_number, character in enumerate(Word):
+            if position_number < len(typed_characters):
+                if typed_characters[position_number] == character:
+                    Display.append(f"{green}{character}{reset}")
+                else:
+                    Display.append(f"{red}{typed_characters[position_number]}{reset}")
+            else:
+                Display.append(f"{grey}{character}{reset}")
+
+        print("\r GO!:- " + " ".join(Display), end="", flush=True)
 
     print()
     end_time = time.time()
