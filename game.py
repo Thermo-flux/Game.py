@@ -2,6 +2,10 @@ import string
 import random
 import time
 import readchar
+import pygame
+pygame.mixer.init()
+Keypress = pygame.mixer.Sound("Keypress.wav")
+Keypress.set_volume(0.6)
 green = "\033[92m"
 red = "\033[91m"
 grey = "\033[90m"
@@ -59,6 +63,7 @@ while True :
     while len(typed_characters) < len(Word):
         key = readchar.readkey()
 
+
         if start_time is None:
             start_time = time.time()
 
@@ -68,6 +73,7 @@ while True :
         elif key.isprintable() and len(key) == 1:
             total_keystrokes += 1
             typed_characters.append(key)
+            Keypress.play()
 
         Display = []
         for position_number, character in enumerate(Word):
