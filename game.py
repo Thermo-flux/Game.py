@@ -95,7 +95,7 @@ while True :
         print ("PERFECT MATCH! Good Job!")
         WPM = (len(typed_word) / 5 / total_time) * 60
         accuracy = (len(Word) / max(total_keystrokes, len(Word))) * 100
-        print (f"\nYou Typed it in {total_time:.2f} Seconds!\n With A Speed of {WPM:.0f} WPM\n And {accuracy} Accuracy! ")
+        print (f"\nYou Typed it in {total_time:.2f} Seconds!\n With A Speed of {WPM:.0f} WPM\n And {accuracy:.1f}% Accuracy! ")
     else :
         user_answer = input ("OOPS! Wrong Word Entered! press y to Retry!")
         if user_answer.lower() != "y" :
